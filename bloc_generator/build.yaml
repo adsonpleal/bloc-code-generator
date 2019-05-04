@@ -1,0 +1,9 @@
+builders:
+
+  bloc_builder:
+    import: "package:bloc_builder/builder.dart"
+    builder_factories: ["blocBuilder"]
+    build_extensions: {".dart": ["bloc.g.part"]}
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
