@@ -5,7 +5,7 @@ A Dart package that generates code for the [bloc library](https://github.com/fel
 
 ## GenerateBloc Annotation
 
-**GenerateBloc** is a dart annotation that requires a `State` as parameter, the state can be a primitive or a object. It handles the bloc's generation.
+**GenerateBloc** is a dart annotation that requires a `State` as parameter, the state can be a primitive or an object. It handles the bloc's generation.
 
 ## How it works
 
