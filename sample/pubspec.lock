@@ -29,10 +29,10 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.11.2"
-  bloc_builder:
+  bloc_code_generator:
     dependency: "direct dev"
     description:
-      path: "../bloc_generator"
+      path: "../bloc_code_generator"
       relative: true
     source: path
     version: "0.0.0"

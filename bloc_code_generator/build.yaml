@@ -1,7 +1,7 @@
 builders:
 
-  bloc_builder:
-    import: "package:bloc_builder/builder.dart"
+  bloc_code_generator:
+    import: "package:bloc_code_generator/builder.dart"
     builder_factories: ["blocBuilder"]
     build_extensions: {".dart": ["bloc.g.part"]}
     auto_apply: dependents

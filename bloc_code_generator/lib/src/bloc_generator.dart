@@ -13,7 +13,7 @@ class _EventMethod {
   _EventMethod({this.name, this.event, this.method});
 }
 
-class BlocGenerator extends GeneratorForAnnotation<BuildBloc> {
+class BlocGenerator extends GeneratorForAnnotation<GenerateBloc> {
   @override
   String generateForAnnotatedElement(
     Element element,

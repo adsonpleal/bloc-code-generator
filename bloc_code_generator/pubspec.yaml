@@ -1,4 +1,4 @@
-name: bloc_builder
+name: bloc_code_generator
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

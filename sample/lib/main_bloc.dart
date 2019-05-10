@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:bloc_builder/annotations.dart';
+import 'package:bloc_code_generator/annotations.dart';
 
 part 'main_bloc.g.dart';
 
@@ -9,7 +9,7 @@ class MainState {
   MainState(this.counter);
 }
 
-@BuildBloc(MainState)
+@GenerateBloc(MainState)
 class MainBloc extends _$Bloc {
 
   @override
