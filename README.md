@@ -1,3 +1,5 @@
+# Bloc Code Generator
+
 A Dart package that generates code for the [bloc library](https://github.com/felangel/bloc).
 
 
