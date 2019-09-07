@@ -30,7 +30,7 @@ dev_dependencies:
     sdk: flutter
   build_runner: '>=0.10.3 <1.2.0'
   bloc_code_generator:
-    path: ../bloc_code_generator
+    path: ..
 
 
 # For information on the generic Dart part of this file, see the

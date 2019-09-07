@@ -1,3 +1,11 @@
+# 0.1.0
+
+Improve package Maintenance.
+
+- Move files to the right paths
+- Update dependencies
+- Update package description
+
 # 0.0.2
 
 Fix analyzer import.

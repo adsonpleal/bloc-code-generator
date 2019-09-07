@@ -1,6 +1,6 @@
 name: bloc_code_generator
-description: A generator that makes working with bloc easier
-version: 0.0.2
+description: Bloc Code Generator is a code generator for https://github.com/felangel/bloc package.
+version: 0.1.0
 author: adson.leal <adsonpleal@gmail.com>
 homepage: https://github.com/adsonpleal/bloc-code-generator
 
@@ -10,5 +10,5 @@ environment:
 
 dependencies:
   build: ^1.0.0
-  analyzer: '>= 0.32.4 <0.36.0'
+  analyzer: '>= 0.32.4 <0.38.2'
   source_gen: ^0.9.0

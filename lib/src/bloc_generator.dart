@@ -53,7 +53,7 @@ class BlocGenerator extends GeneratorForAnnotation<GenerateBloc> {
     final params =
         methodParams.map((p) => "${p.type.displayName} ${p.name}").join(',');
     String payload = '';
-    if (methodParams.length > 0) {
+    if (methodParams.isNotEmpty) {
       final args = methodParams.map((p) => p.name).join(',');
       payload = 'payload: [$args],';
     }
