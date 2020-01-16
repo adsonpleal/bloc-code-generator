@@ -31,19 +31,19 @@ abstract class _$Bloc extends Bloc<_$Event, MainState> {
   }
 
   void dispatchIncrementEvent() {
-    dispatch(_$Event(
+    add(_$Event(
       type: _$EventType.increment,
     ));
   }
 
   void dispatchDecrementEvent() {
-    dispatch(_$Event(
+    add(_$Event(
       type: _$EventType.decrement,
     ));
   }
 
   void dispatchIncrementByEvent(int value) {
-    dispatch(_$Event(
+    add(_$Event(
       type: _$EventType.incrementBy,
       payload: [value],
     ));

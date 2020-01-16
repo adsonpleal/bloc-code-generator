@@ -59,7 +59,7 @@ class BlocGenerator extends GeneratorForAnnotation<GenerateBloc> {
     }
     return '''
     void dispatch${eventMethod.name}Event($params) {
-      dispatch(_\$Event(
+      add(_\$Event(
         type: _\$EventType.${eventMethod.event},
         $payload
       ));
