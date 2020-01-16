@@ -1,3 +1,11 @@
+# Compatible with the latest flutter's beta version
+
+
+
+-------------------
+
+
+
 # Bloc Code Generator
 
 A Dart package that generates code for the [bloc library](https://github.com/felangel/bloc).
@@ -54,7 +62,7 @@ abstract class _$Bloc extends Bloc<_$Event, MyState> {
   }
 
   void dispatchDoSomethingEvent(int someValue, SomeModel someModel) {
-    dispatch(_$Event(
+    add(_$Event(
       type: _$EventType.increment,
       payload: [someValue, someModel],
     ));

@@ -16,15 +16,15 @@ class MainBloc extends _$Bloc {
   MainState get initialState => MainState(0);
 
   Stream<MainState> _mapIncrementToState() async* {
-    yield MainState(currentState.counter + 1);
+    yield MainState(state.counter + 1);
   }
 
   Stream<MainState> _mapDecrementToState() async* {
-    yield MainState(currentState.counter - 1);
+    yield MainState(state.counter - 1);
   }
 
   Stream<MainState> _mapIncrementByToState(int value) async* {
-    yield MainState(currentState.counter + value);
+    yield MainState(state.counter + value);
   }
 
 }
