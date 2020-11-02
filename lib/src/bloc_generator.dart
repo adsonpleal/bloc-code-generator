@@ -32,10 +32,17 @@ class BlocGenerator extends GeneratorForAnnotation<GenerateBloc> {
   String _blocClass(List<_EventMethod> eventMethods, DartType stateType) {
     return '''
     abstract class _\$Bloc extends Bloc<_\$Event,${stateType.name}> {\n
+      ${_construct(stateType)}
       ${_mapToStateMethod(eventMethods, stateType)}
       ${eventMethods.map(_dispatchMethod).join('\n')}
       ${eventMethods.map((em) => _abstractMethod(em, stateType)).join('\n')}
     }
+    ''';
+  }
+  
+  String _construct(DartType stateType) {
+    return '''
+    _\$Bloc(${stateType.name} initialState) : super(initialState);
     ''';
   }
 

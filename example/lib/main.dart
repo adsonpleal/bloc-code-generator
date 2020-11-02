@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'main_bloc.dart';
+import 'main_bloc.dart';
 
 void main() => runApp(MyApp());
 
@@ -34,8 +35,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Counter Page'),
       ),
-      body: BlocBuilder(
-        bloc: _bloc,
+      body: BlocBuilder<MainBloc, MainState>(
+//        bloc: _bloc,
+        cubit: _bloc,
         builder: (context, MainState state) => Center(
               child: Text(
                 '${state.counter}',

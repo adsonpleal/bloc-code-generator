@@ -11,9 +11,8 @@ class MainState {
 
 @GenerateBloc(MainState)
 class MainBloc extends _$Bloc {
-
-  @override
-  MainState get initialState => MainState(0);
+  
+  MainBloc() : super(MainState(0));
 
   Stream<MainState> _mapIncrementToState() async* {
     yield MainState(state.counter + 1);

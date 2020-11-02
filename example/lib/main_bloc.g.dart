@@ -16,6 +16,8 @@ class _$Event {
 }
 
 abstract class _$Bloc extends Bloc<_$Event, MainState> {
+  _$Bloc(MainState initialState) : super(initialState);
+
   Stream<MainState> mapEventToState(_$Event event) async* {
     switch (event.type) {
       case _$EventType.increment:
