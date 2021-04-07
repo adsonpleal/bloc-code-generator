@@ -9,8 +9,8 @@ part of 'main_bloc.dart';
 enum _$EventType { increment, decrement, incrementBy }
 
 class _$Event {
-  final _$EventType type;
-  final List<dynamic> payload;
+  final _$EventType? type;
+  final List<dynamic>? payload;
 
   _$Event({this.type, this.payload});
 }
@@ -27,7 +27,7 @@ abstract class _$Bloc extends Bloc<_$Event, MainState> {
         yield* _mapDecrementToState();
         break;
       case _$EventType.incrementBy:
-        yield* _mapIncrementByToState(event.payload[0]);
+        yield* _mapIncrementByToState(event.payload![0]);
         break;
     }
   }

@@ -83,8 +83,8 @@ class BlocGenerator extends GeneratorForAnnotation<GenerateBloc> {
     
     String get _eventClass => '''
     class _\$Event {
-      final _\$EventType type;
-      final List<dynamic> payload;
+      final _\$EventType? type;
+      final List<dynamic>? payload;
 
       _\$Event({this.type, this.payload});
     }  
@@ -96,7 +96,7 @@ class BlocGenerator extends GeneratorForAnnotation<GenerateBloc> {
             final params = em.method.parameters
                 .asMap()
                 .keys
-                .map((index) => 'event.payload[$index]')
+                .map((index) => 'event.payload![$index]')
                 .join(',');
             return '''
         case _\$EventType.${em.event}:
