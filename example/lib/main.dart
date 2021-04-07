@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (context, MainState state) => Center(
               child: Text(
                 '${state.counter}',
-                style: Theme.of(context).textTheme.display1,
+                // style: Theme.of(context).textTheme.display1,
               ),
             ),
       ),

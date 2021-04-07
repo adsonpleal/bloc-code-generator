@@ -44,7 +44,7 @@ abstract class _$Bloc extends Bloc<_$Event, MainState> {
     ));
   }
 
-  void dispatchIncrementByEvent(int value) {
+  void dispatchIncrementByEvent(int? value) {
     add(_$Event(
       type: _$EventType.incrementBy,
       payload: [value],
@@ -55,5 +55,5 @@ abstract class _$Bloc extends Bloc<_$Event, MainState> {
 
   Stream<MainState> _mapDecrementToState();
 
-  Stream<MainState> _mapIncrementByToState(int value);
+  Stream<MainState> _mapIncrementByToState(int? value);
 }

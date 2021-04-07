@@ -22,8 +22,8 @@ class MainBloc extends _$Bloc {
     yield MainState(state.counter - 1);
   }
 
-  Stream<MainState> _mapIncrementByToState(int value) async* {
-    yield MainState(state.counter + value);
+  Stream<MainState> _mapIncrementByToState(int? value) async* {
+    yield MainState(state.counter + (value ?? 0));
   }
 
 }

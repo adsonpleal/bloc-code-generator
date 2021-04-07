@@ -49,7 +49,7 @@ class BlocGenerator extends GeneratorForAnnotation<GenerateBloc> {
     
     String _abstractMethod(_EventMethod eventMethod, DartType stateType) {
         final params = eventMethod.method.parameters
-            .map((p) => "${p.type.displayName} ${p.name}")
+            .map((p) => "${p.type.getDisplayString(withNullability: true)} ${p.name}")
             .join(',');
         return '''
     Stream<${stateType.name}> ${eventMethod.method.name}($params);
@@ -58,8 +58,7 @@ class BlocGenerator extends GeneratorForAnnotation<GenerateBloc> {
     
     String _dispatchMethod(_EventMethod eventMethod) {
         final methodParams = eventMethod.method.parameters;
-        final params =
-        methodParams.map((p) => "${p.type.displayName} ${p.name}").join(',');
+        final params = methodParams.map((p) => "${p.type.getDisplayString(withNullability: true)} ${p.name}").join(',');
         String payload = '';
         if (methodParams.isNotEmpty) {
             final args = methodParams.map((p) => p.name).join(',');
@@ -104,7 +103,7 @@ class BlocGenerator extends GeneratorForAnnotation<GenerateBloc> {
           break;''';
         }).join('\n');
         return '''
-      Stream<${stateType.name}> mapEventToState(_\$Event event) async* {
+      Stream<${stateType.getDisplayString(withNullability: false)}> mapEventToState(_\$Event event) async* {
         switch(event.type) {
           $cases
         }
